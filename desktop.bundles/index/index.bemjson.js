@@ -1,6 +1,6 @@
 ({
     block: 'page',
-    title: 'Title of the page',
+    title: 'BEM tryout',
     favicon: '/favicon.ico',
     head: [
         { elem: 'css', url: '_index.css', ie: false },
