@@ -7,7 +7,6 @@ modules.define('i-bem__dom', ['jquery'], function(provide, $, DOM) {
             'js': {
                 'inited': function() {
                     this._setup();
-                    this._setupControls();
                 }
             },
             'ready': function() {
@@ -48,6 +47,8 @@ modules.define('i-bem__dom', ['jquery'], function(provide, $, DOM) {
 
             // FIXME: params (or mod) instead of attributes
             this._autostart = this.domElem.data('autostart') || false;
+
+            this._setupControls();
 
             this.setMod('ready', true);
         },
