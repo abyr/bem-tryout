@@ -20,6 +20,12 @@
                 ' start ',
                 {
                     block: 'b-carousel',
+                    attrs: {
+                        'data-autostart': true
+                    },
+                    mods: {
+                        type: 'auto'
+                    },
                     content: [
                         {
                             title: '11111111111111'
