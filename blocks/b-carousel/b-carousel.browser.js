@@ -41,9 +41,13 @@ modules.define('i-bem__dom', ['jquery'], function(provide, $, DOM) {
             this.setMod('ready', true);
         },
 
-        _slide: function() {
+        _slide: function(duration) {
             index = 2;
             console.log('_slide', index);
+            if (duration) {
+                duration = (duration/1000) + "s";
+                this.elem('container').css("transition", duration);
+            }
             target = '-' + (index*210) + 'px';
             target = "translate(" + target + ",0)";
             this.elem('container').css('transform', target);
@@ -72,7 +76,7 @@ modules.define('i-bem__dom', ['jquery'], function(provide, $, DOM) {
         },
         _next: function() {
             console.log('_next');
-            this._slide();
+            this._slide(3000);
         },
         _prev: function() {
             console.log('_prev');
