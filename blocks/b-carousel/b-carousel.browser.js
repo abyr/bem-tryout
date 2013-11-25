@@ -54,6 +54,13 @@ modules.define('i-bem__dom', ['jquery'], function(provide, $, DOM) {
 
         _setupControls: function() {
             console.log('_setupControls');
+
+            this.bindTo(this.elem('control', 'type', 'next'), 'click', function(){
+                this._next();
+            }, this);
+            this.bindTo(this.elem('control', 'type', 'prev'), 'click', function(){
+                this._prev();
+            }, this);
         },
 
         _slide: function(duration) {
