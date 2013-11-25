@@ -25,6 +25,10 @@ modules.define('i-bem__dom', ['jquery'], function(provide, $, DOM) {
 
         _delaySlideMs: 2000,
 
+        _currentItemIndex: 0,
+
+        _itemWidth: 210, // px
+
         _setup: function() {
 
             if (this.elem('container').size()) {
@@ -42,13 +46,13 @@ modules.define('i-bem__dom', ['jquery'], function(provide, $, DOM) {
         },
 
         _slide: function(duration) {
-            index = 2;
+            index = this._currentItemIndex;
             console.log('_slide', index);
             if (duration) {
                 duration = (duration/1000) + "s";
                 this.elem('container').css("transition", duration);
             }
-            target = '-' + (index*210) + 'px';
+            target = '-' + (index*this._itemWidth) + 'px';
             target = "translate(" + target + ",0)";
             this.elem('container').css('transform', target);
         },
@@ -76,10 +80,12 @@ modules.define('i-bem__dom', ['jquery'], function(provide, $, DOM) {
         },
         _next: function() {
             console.log('_next');
-            this._slide(3000);
+            this._currentItemIndex++;
+            this._slide();
         },
         _prev: function() {
             console.log('_prev');
+            this._currentItemIndex--;
             this._slide();
         }
 
