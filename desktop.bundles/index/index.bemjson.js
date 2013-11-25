@@ -31,7 +31,7 @@
                             title: '11111111111111'
                         },
                         {
-                            title: '2222222222222'
+                            title: '<img src="http://jsbooks.revolunet.com/img/logo_jsbooks.png" />'
                         },
                         {
                             title: '3333333333'
