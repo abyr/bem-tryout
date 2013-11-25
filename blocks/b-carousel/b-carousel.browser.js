@@ -52,6 +52,12 @@ modules.define('i-bem__dom', ['jquery'], function(provide, $, DOM) {
         },
         _play: function() {
             console.log('_play');
+            if (!this._started) {
+                this._started = setInterval(function(ctx){
+                    ctx._next();
+                    // ctx._prev();
+                }, this._delaySlideMs, this);
+            }
         },
         _stop: function() {
             console.log('_stop');
