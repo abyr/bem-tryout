@@ -1,3 +1,28 @@
 .b-carousel
 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 700px;
+    overflow: hidden;
+    border: 1px solid blue;
+}
+.b-carousel ul
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.b-carousel .b-carousel__container
+{
+    width: 2000px;
+}
+
+.b-carousel .b-carousel__container .b-carousel__item
+{
+    width: 210px;
+    float: left;
+    height: 100px;
+    border: 1px solid red;
+    overflow: hidden;
 }
