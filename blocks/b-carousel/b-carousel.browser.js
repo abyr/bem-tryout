@@ -27,13 +27,13 @@ modules.define('i-bem__dom', ['jquery'], function(provide, $, DOM) {
 
         _currentItemIndex: 0,
 
-        _itemWidth: 210, // px
+        _itemWidth: 0, // px
 
         _setup: function() {
 
             if (this.elem('container').size()) {
 
-                // process styles, setup params
+                this._itemWidth = this.elem('item').first().innerWidth()
 
             } else {
                 throw new Error('Setup failed.')
