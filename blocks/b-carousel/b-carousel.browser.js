@@ -87,7 +87,15 @@ modules.define('i-bem__dom', ['jquery'], function(provide, $, DOM) {
         _next: function() {
             console.log('_next');
             this._currentItemIndex += this._itemsOnSlide;
+            lastIndex = this.elem('item').length - this._itemsOnSlide
+            if (this._currentItemIndex > lastIndex) {
+                this._currentItemIndex = lastIndex;
+            }
             this._slide();
+            if (this._currentItemIndex === lastIndex) {
+                this._currentItemIndex = -this._itemsOnSlide;
+            }
+
         },
         _prev: function() {
             console.log('_prev');
