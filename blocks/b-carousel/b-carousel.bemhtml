@@ -60,4 +60,7 @@ block b-carousel {
     elem item, tag: 'li'
     elem title, tag: 'b'
 
+    elem controls, tag: 'ul'
+    elem control, tag: 'li'
+
 }
