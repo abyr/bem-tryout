@@ -11,12 +11,19 @@ modules.define('i-bem__dom', ['jquery'], function(provide, $, DOM) {
             },
             'ready': function() {
                 console.log('ready');
+                if (this._autostart) {
+                    setTimeout(function(ctx){
+                        ctx._togglePlay();
+                    }, this._delaySlideMs, this);
+                }
             }
         },
 
         _started: false,
 
         _autostart: false,
+
+        _delaySlideMs: 2000,
 
         _setup: function() {
 
@@ -36,6 +43,12 @@ modules.define('i-bem__dom', ['jquery'], function(provide, $, DOM) {
 
         _togglePlay: function() {
             console.log('_togglePlay');
+            if (this._started) {
+                this._stop();
+            } else {
+                // stopped
+                this._play();
+            }
         },
         _play: function() {
             console.log('_play');
