@@ -86,12 +86,12 @@ modules.define('i-bem__dom', ['jquery'], function(provide, $, DOM) {
         },
         _next: function() {
             console.log('_next');
-            this._currentItemIndex++;
+            this._currentItemIndex += this._itemsOnSlide;
             this._slide();
         },
         _prev: function() {
             console.log('_prev');
-            this._currentItemIndex--;
+            this._currentItemIndex -= this._itemsOnSlide;
             this._slide();
         }
 
