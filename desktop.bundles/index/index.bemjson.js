@@ -45,6 +45,18 @@
                         {
                             title: '666666666'
                         }
+                    ],
+                    controls: [
+                        {
+                            elem: 'button',
+                            type: 'prev',
+                            content: '<'
+                        },
+                        {
+                            elem: 'button',
+                            type: 'next',
+                            content: '>'
+                        }
                     ]
                 },
                 ' end '
