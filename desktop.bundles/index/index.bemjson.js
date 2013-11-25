@@ -17,7 +17,14 @@
         {
             block: 'content',
             content: [
-                'main content'
+                ' start ',
+                {
+                    block: 'b-carousel',
+                    content: [
+                        'data'
+                    ]
+                },
+                ' end '
             ]
         },
         {
