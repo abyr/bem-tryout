@@ -7,6 +7,7 @@ modules.define('i-bem__dom', ['jquery'], function(provide, $, DOM) {
             'js': {
                 'inited': function() {
                     this._setup();
+                    this._setupControls();
                 }
             },
             'ready': function() {
@@ -49,6 +50,10 @@ modules.define('i-bem__dom', ['jquery'], function(provide, $, DOM) {
             this._autostart = this.domElem.data('autostart') || false;
 
             this.setMod('ready', true);
+        },
+
+        _setupControls: function() {
+            console.log('_setupControls');
         },
 
         _slide: function(duration) {
