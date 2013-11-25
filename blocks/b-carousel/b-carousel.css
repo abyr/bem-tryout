@@ -6,6 +6,9 @@
     width: 700px;
     overflow: hidden;
     border: 1px solid blue;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease 0s;
 }
 .b-carousel ul
 {
@@ -16,6 +19,9 @@
 .b-carousel .b-carousel__container
 {
     width: 2000px;
+    transition: 0.6s;
+    transition-duration: 0.6s;
+    transform: translate(0px, 0px);
 }
 
 .b-carousel .b-carousel__container .b-carousel__item
