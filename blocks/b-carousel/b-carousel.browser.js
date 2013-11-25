@@ -28,12 +28,18 @@ modules.define('i-bem__dom', ['jquery'], function(provide, $, DOM) {
         _currentItemIndex: 0,
 
         _itemWidth: 0, // px
+        _slideWidth: 0, // px
+
+        _itemsOnSlide: 1,
 
         _setup: function() {
 
             if (this.elem('container').size()) {
 
-                this._itemWidth = this.elem('item').first().innerWidth()
+                this._itemWidth = this.elem('item').first().innerWidth();
+                this._slideWidth = this.domElem.innerWidth();
+
+                this._itemsOnSlide = Math.floor(this._slideWidth / this._itemWidth) || 1;
 
             } else {
                 throw new Error('Setup failed.')
