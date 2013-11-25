@@ -1,0 +1,42 @@
+block b-carousel {
+
+    js: true
+
+    tag: 'div'
+
+    content: {
+
+        var content = [];
+
+        var container = [];
+
+        this.ctx.content.forEach(function(item){
+
+            container.push({
+                elem: 'item',
+                content: [
+                    {
+                        elem: 'title',
+                        content: item.title
+                    }
+                ]
+            });
+
+            container.push(' ');
+
+        });
+
+        content.push({
+            elem: 'container',
+            content: container
+        });
+
+        return content;
+
+    }
+
+    elem container, tag: 'ul'
+    elem item, tag: 'li'
+    elem title, tag: 'b'
+
+}
