@@ -76,8 +76,8 @@ modules.define('i-bem__dom', ['jquery'], function(provide, $, DOM) {
             console.log('_play');
             if (!this._started) {
                 this._started = setInterval(function(ctx){
-                    ctx._next();
-                    // ctx._prev();
+                    // ctx._next();
+                    ctx._prev();
                 }, this._delaySlideMs, this);
             }
         },
@@ -100,7 +100,13 @@ modules.define('i-bem__dom', ['jquery'], function(provide, $, DOM) {
         _prev: function() {
             console.log('_prev');
             this._currentItemIndex -= this._itemsOnSlide;
+            if (this._currentItemIndex < 0) {
+                this._currentItemIndex = 0;
+            }
             this._slide();
+            if (this._currentItemIndex === 0) {
+                this._currentItemIndex = this.elem('item').length;
+            }
         }
 
     });
