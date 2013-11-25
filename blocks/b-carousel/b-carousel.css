@@ -2,8 +2,8 @@
 {
     margin: 0;
     padding: 0;
-    border: 0;
-    width: 700px;
+    position: relative;
+    width: 500px;
     overflow: hidden;
     border: 1px solid blue;
     -webkit-transition: all 1s ease;
@@ -23,7 +23,6 @@
     transition-duration: 0.6s;
     transform: translate(0px, 0px);
 }
-
 .b-carousel .b-carousel__container .b-carousel__item
 {
     width: 210px;
@@ -31,4 +30,25 @@
     height: 100px;
     border: 1px solid red;
     overflow: hidden;
+}
+
+.b-carousel .b-carousel__controls
+{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+.b-carousel .b-carousel__control
+{
+    cursor: pointer;
+}
+
+.b-carousel .b-carousel__control_type_prev
+{
+    float: left;
+}
+.b-carousel .b-carousel__control_type_next
+{
+    float: right;
 }
