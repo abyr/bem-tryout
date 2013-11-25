@@ -9,6 +9,7 @@ block b-carousel {
         var content = [];
 
         var container = [];
+        var controls = [];
 
         this.ctx.content.forEach(function(item){
 
@@ -29,6 +30,26 @@ block b-carousel {
         content.push({
             elem: 'container',
             content: container
+        });
+
+        this.ctx.controls.forEach(function(control){
+            controls.push({
+                elem: 'control',
+                mods: {
+                    type: control.type
+                },
+                content: {
+                    block: 'control',
+                    content: control.content
+                }
+            });
+
+            controls.push(' ');
+        });
+
+        content.push({
+            elem: 'controls',
+            content: controls
         });
 
         return content;
