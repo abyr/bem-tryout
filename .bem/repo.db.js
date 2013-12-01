@@ -51,6 +51,10 @@ module.exports = {
     'bem-yana' : {
         type     : 'git',
         url      : 'git://github.com/narqo/bem-yana.git'
+    },
+    'bembl-carousel' : {
+        type: 'git',
+        url: 'git@github.com:abyr/bembl-carousel.git'
     }
 
 };
