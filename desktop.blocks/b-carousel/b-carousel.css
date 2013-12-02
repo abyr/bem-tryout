@@ -1,0 +1,15 @@
+
+.b-carousel .b-carousel__container .b-carousel__item
+{
+    border: none;
+}
+.b-carousel .b-carousel__control
+{
+    font-weight: bold;
+    font-size: 2em;
+    border: 2px solid;
+    border-radius: 20px;
+    padding: 0 10px;
+    margin-top: -1em;
+    background-color: #fff;
+}
